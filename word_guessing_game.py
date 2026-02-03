@@ -1,44 +1,46 @@
 import random
 
-name = input("What is your name? ")
-print("Good luck ! ", name)
 
-words = ['rainbow', 'computer', 'science', 'programming',
-         'python', 'mathematics', 'player', 'condition',
-         'reverse', 'water', 'board', 'geeks']
-word = random.choice(words)
+def word_guessing_game():
+    name = input("What is your name? ")
+    print("Good luck ! ", name)
 
-print("Guess the characters.")
+    words = ['rainbow', 'computer', 'science', 'programming',
+             'python', 'mathematics', 'player', 'condition',
+             'reverse', 'water', 'board', 'geeks']
+    word = random.choice(words)
 
-guesses = ''
-turns = 12
+    print("Guess the characters.")
 
-while turns > 0:
+    guesses = ''
+    turns = 12
 
-    failed = 0
+    while turns > 0:
 
-    for char in word:
-        if char in guesses:
-            print(char)
-        else:
-            print("_")
-            failed += 1
+        failed = 0
 
-    if failed == 0:
-        print("You win!")
-        print("The word is: ", word)
-        break
+        for char in word:
+            if char in guesses:
+                print(char)
+            else:
+                print("_")
+                failed += 1
 
-    guess = input("guess a character: ")
-    guesses += guess
+        if failed == 0:
+            print("You win!")
+            print("The word is: ", word)
+            break
 
-    if guess not in word:
-        turns -= 1
-        print("Wrong")
-        print("You have", + turns, "more guesses")
+        guess = input("guess a character: ")
+        guesses += guess
 
-        if turns == 0:
-            print("You lose")
+        if guess not in word:
+            turns -= 1
+            print("Wrong")
+            print("You have", + turns, "more guesses")
+
+            if turns == 0:
+                print("You lose")
 
 
 
