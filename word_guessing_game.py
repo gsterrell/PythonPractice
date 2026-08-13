@@ -26,12 +26,19 @@ def word_guessing_game():
                 print("_")
                 failed += 1
 
+        print()
+
         if failed == 0:
             print("You win!")
             print("The word is: ", word)
             break
 
         guess = input("guess a character: ")
+
+        if len(guess) != 1:
+            print("Please enter a single character.")
+            continue
+
         guesses += guess
 
         if guess not in word:
