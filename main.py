@@ -6,6 +6,7 @@ import guessing_game
 import word_guessing_game
 import hangman_game
 import twenty_one_number_game
+import rock_paper_scissors_game
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -14,7 +15,7 @@ if __name__ == '__main__':
     print("2. Word Guessing Game")
     print("3. Hangman Game")
     print("4. 21 Number Game")
-    # print("Rock Paper Scissor Game")
+    print("5. Rock Paper Scissor Game")
     # Check if two PDF documents are identical
     # Convert emoji into text
     # Create a Voice Recorder
@@ -44,6 +45,8 @@ if __name__ == '__main__':
         hangman_game.hangman_game()
     elif selection == 4:
         twenty_one_number_game.twenty_one_number_game()
+    elif selection == 5:
+        rock_paper_scissors_game.rock_paper_scissors_game()
     else:
         print("Program not yet implemented")
 
